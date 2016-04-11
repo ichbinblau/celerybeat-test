@@ -1,10 +1,10 @@
 from __future__ import absolute_import
 
 from celery import Celery
-from celery_proj import celery_schedule
+from celerybeat_test import celery_schedule
 
 app = Celery('tasks')
-app.config_from_object('celery_proj.celeryconfig')
+app.config_from_object('celerybeat_test.celeryconfig')
 
 # Optional configuration, see the application user guide.
 app.conf.update(
